@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { navData } from './data'
 import {MdOutlineKeyboardArrowDown} from 'react-icons/md'
 import { useTransition, animated } from 'react-spring'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function NavView() {
   const Data = navData
@@ -24,20 +24,20 @@ function NavView() {
       <Navi>
         <Logo><img src={item.logo} alt="" /></Logo>
         <Links>
-          <a href="#" onMouseOver={()=>setShowMenu(true)} onMouseOut={()=>setShowMenu(false)}>Solution <MdOutlineKeyboardArrowDown/></a>
-          <a href="#">Resources</a>
-          <a href="#">Pricing</a>
-          <a href="#">Company</a>
+          <Link to='/' onMouseOver={()=>setShowMenu(true)} onMouseOut={()=>setShowMenu(false)}>Solution <MdOutlineKeyboardArrowDown/></Link>
+          <Link to='/'>Resources</Link>
+          <Link to='/'>Pricing</Link>
+          <Link to='/'>Company</Link>
         </Links>
         <GetStarted>{item.btn}</GetStarted>
 
         {
         menuTransitions(
         (styles, item) => item && <animated.div style={styles} className='animate' onMouseOut={()=>{setShowMenu(false)}} onMouseOver={()=>{setShowMenu(true)}}>
-          <a href="#" to='/'>Support Request</a>
-          <a href="#" to='/'>Product Enquiry</a>
-          <a href="#">Solution Assessment</a>
-          <a href="#">Others</a>       
+          <Link to='/'>Support Request</Link>
+          <Link to='/'>Product Enquiry</Link>
+          <Link to='/'>Solution Assessment</Link>
+          <Link to='/'>Others</Link>       
         </animated.div>
         )
       }
