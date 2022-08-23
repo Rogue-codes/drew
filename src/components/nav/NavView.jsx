@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { navData } from './data'
 import {MdOutlineKeyboardArrowDown} from 'react-icons/md'
 import { useTransition, animated } from 'react-spring'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 function NavView() {
   const Data = navData
