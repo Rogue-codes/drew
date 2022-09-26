@@ -34,7 +34,7 @@ function NavView() {
         {
         menuTransitions(
         (styles, item) => item && <animated.div style={styles} className='animate' onMouseOut={()=>{setShowMenu(false)}} onMouseOver={()=>{setShowMenu(true)}}>
-          <Link to='/'>Support Request</Link>
+          <Link to='/support'>Support Request</Link>
           <Link to='/'>Product Enquiry</Link>
           <Link to='/'>Solution Assessment</Link>
           <Link to='/'>Others</Link>       
