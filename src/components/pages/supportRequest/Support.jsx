@@ -154,6 +154,9 @@ const Header = styled.form`
         font-size: 3vw;
     }
     input{
+        @media (max-width: 767px) {
+            height: 6vh;
+        }
         height: 8vh;
         width: 100%;
         border: none;
