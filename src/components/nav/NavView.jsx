@@ -51,7 +51,7 @@ export default NavView
 const Navi = styled.nav`
   width: 100%;
   height: 15vh;
-  border: 1px solid black;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
