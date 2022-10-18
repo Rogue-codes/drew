@@ -22,7 +22,7 @@ function NavView() {
   return (
     Data.map((item)=>(
       <Navi>
-        <Logo><img src={item.logo} alt="" /></Logo>
+        <Logo><Link to='/'><img src={item.logo} alt="" /></Link></Logo>
         <Links>
           <Link to='/' onMouseOver={()=>setShowMenu(true)} onMouseOut={()=>setShowMenu(false)}>Solution <MdOutlineKeyboardArrowDown/></Link>
           <Link to='/'>Resources</Link>
@@ -35,8 +35,8 @@ function NavView() {
         menuTransitions(
         (styles, item) => item && <animated.div style={styles} className='animate' onMouseOut={()=>{setShowMenu(false)}} onMouseOver={()=>{setShowMenu(true)}}>
           <Link to='/support'>Support Request</Link>
-          <Link to='/'>Product Enquiry</Link>
-          <Link to='/'>Solution Assessment</Link>
+          <Link to='/enquiry'>Product Enquiry</Link>
+          <Link to='/solutions'>Solution Assessment</Link>
           <Link to='/'>Others</Link>       
         </animated.div>
         )
@@ -66,6 +66,7 @@ const Navi = styled.nav`
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         left: 25%;
         top: 12%;
+        z-index: 10;
         a{
           display: block;
           border-top: 1px solid rgb(156, 50, 51);
@@ -80,7 +81,7 @@ const Navi = styled.nav`
     }
 `
 
-const Logo = styled.div`
+const Logo = styled.a`
   width: 15%;
   height: 100px;
   img{
