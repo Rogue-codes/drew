@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 function FirstSection() {
@@ -8,6 +9,7 @@ function FirstSection() {
         <p>Welcome to our</p>
         <h1>SUPPORT PORTAL</h1>
         <p>African Cloud Company</p>
+        <Link to='/support'>Get started</Link>
       </div>
     </Container>
   );
@@ -62,6 +64,22 @@ const Container = styled.div`
       color: #ffff;
       font-family: "Spectral", serif;
       font-weight: 500;
+    }
+    a{
+        @media (max-width: 768px) {
+            width: 50%;
+            font-size: 1.2rem;
+        }
+        background: #9c3233;
+        width: 35%;
+        height: 10vh;
+        text-decoration: none;
+        color: #ffff;
+        font-size: 1.8vw;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
   }
 `;
