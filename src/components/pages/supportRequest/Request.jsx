@@ -42,6 +42,9 @@ const Cards = styled.div`
     }
 `
 const Support = styled.h1`
+@media (max-width: 768px) {
+    font-size: 2rem;
+}
     position: absolute;
     top: 0;
     height: 10vh;
