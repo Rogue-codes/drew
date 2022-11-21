@@ -5,3 +5,13 @@
   box-sizing: border-box;
   font-family: 'Merriweather', serif;
 }
+.error{
+  font-size: .7vw !important;
+  color: red !important;
+}
+@media (max-width:768px) {
+  .error{
+    font-size: .7rem !important;
+    color: red !important;
+  }
+}
