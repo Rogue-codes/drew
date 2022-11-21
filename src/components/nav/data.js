@@ -1,6 +1,6 @@
 export const navData = [
     {
         logo:'/cldsa.png',
-        btn:"Get Started"
+        btn:"submit request"
     }
 ]
